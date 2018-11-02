@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Your World</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <div class="container" id="con">
+        <div class="sun" id="sun"></div>
+        <div class="sky" id="sky"></div>
+        <div class="back_two" id="back"></div>
+        <div class="tree" id="tree"></div>
+        <div class="tree_most" id="treeMost">
+            <img src="png/later_tree_most.png" alt="tree_most">
+        </div>
+
+        <div class="bird">
+            <img src="png/bird.gif" alt="bird">
+        </div>
+        <div class="fishman" id="fish">
+            <img src="png/fishingman.png" alt="">
+        </div>
+
+        <div class="circle" id="circle"></div>
+        <div class="circle_two" id="circletwo"></div>
+
+        <div class="coni">
+            <div class="stars"></div>
+        </div>
+
+
+
+    </div>
+
+    <div class="hamb" id="hamb">
+        <div class="span" id="one"></div>
+        <div class="span" id="two"></div>
+        <div class="span" id="treem"></div>
+    </div>
+
+    <div class="modal" id="modal">
+        <h1>PARALLAX ON MOUSE MOVE</h1>
+        <h2>Uses sources:</h2>
+        <h3>Song : Faverkin-October</h3>
+        <h3>Picture : Sorry! Cant find autor</h3>
+        <div class="float">
+            <div class="mute" id="mute" onclick="play_audio('stop')">
+                <img src="icons/mute.svg" alt="link">
+            </div>
+            <div class="vk">
+                <img src="icons/vk.svg" alt="link">
+            </div>
+            <div class="github">
+                <img src="icons/github.svg" alt="link">
+            </div>
+        </div>
+
+    </div>
+
+    <!--    <iframe id="audio" src="Feverkin_October.mp3" allow="autoplay"></iframe>-->
+
+
+    <audio class="my_audio" preload="none" autoplay>
+        <source src="Feverkin_October.mp3" type="audio/mpeg">
+        <source src="Feverkin_October.mp3" type="audio/ogg">
+    </audio>
+   
+
+
+    <script src="js.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="star.js"></script>
+</body>
+
+</html>

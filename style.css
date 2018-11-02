@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+
+}
+
+html {
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(png/back.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.7);
+    perspective: 2000px;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin-top: 80px;
+
+}
+
+.sun {
+    width: 206px;
+    height: 200px;
+    background-image: url(png/sun.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    margin-top: -260px;
+    margin-left: -400px;
+    z-index: 1;
+}
+
+.sky {
+    width: 550px;
+    height: 300px;
+    background-image: url(png/sky.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    margin-top: -14px;
+    margin-left: 100px;
+    z-index: 1;
+}
+
+.back_two {
+    width: 100%;
+    height: 100%;
+    background-image: url(png/back2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+.tree {
+    width: 104%;
+    height: 60%;
+    background-image: url(png/later_tree.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: -20px;
+    z-index: 3;
+}
+
+.tree_most {
+    width: 105%;
+    height: 60%;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: -20px;
+    z-index: 4;
+
+}
+
+.tree_most img {
+    width: 110%;
+    margin-left: -60px;
+    margin-top: 40px;
+}
+
+.bird {
+    position: absolute;
+    animation: bird 90s infinite linear;
+    z-index: 4;
+}
+
+.bird img {
+    width: 20px;
+    transform: rotatey(180deg);
+    filter: blur(1px);
+}
+
+@keyframes bird {
+    from {
+        transform: translate3d(680px, 100px, 0)
+    }
+
+    to {
+        transform: translate3d(-600px, -100px, 0)
+    }
+}
+
+.fishman {
+    position: absolute;
+    z-index: 3;
+}
+
+
+.fishman img {
+    width: 8%;
+    margin-top: 370px;
+    margin-left: 420px;
+    animation: fish 4s infinite linear;
+}
+
+@keyframes fish {
+    0% {
+        transform: rotatez(-2deg);
+    }
+
+    50% {
+        transform: rotatez(2deg);
+    }
+
+    100% {
+        transform: rotatez(-2deg);
+    }
+}
+
+.circle,
+.circle_two {
+    width: 100px;
+    height: 20px;
+    border-radius: 100%;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    position: absolute;
+    margin-top: 208px;
+    z-index: 3;
+    margin-left: -54px;
+    animation: circle 20s infinite linear;
+    opacity: 0;
+    filter: blur(1px);
+}
+
+.circle_two {
+    animation-delay: 10s;
+}
+
+@keyframes circle {
+    0% {
+        opacity: 0;
+        width: 100px;
+    }
+
+    50% {
+        opacity: 0.2;
+        width: 160px;
+        height: 30px;
+    }
+
+    100% {
+        opacity: 0;
+        width: 260px;
+    }
+}
+
+.coni {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    margin-top: -100px;
+    /*    background-color: red;*/
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(2000px) rotateZ(0deg) rotateX(0deg) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(2000px) rotateZ(0deg) rotateX(0deg) rotateY(-80deg);
+    }
+}
+
+.stars {
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 200px;
+    perspective-origin: 50% 100%;
+    left: 50%;
+    animation: rotate 90s infinite linear;
+    z-index: -999;
+    margin-top: 400px;
+    margin-left: 100px;
+}
+
+.star {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    backface-visibility: hidden;
+
+}
+
+.hamb {
+    width: 60px;
+    height: 50px;
+    border-radius: 40px;
+    position: absolute;
+    top: -40px;
+    right: -200px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.hamb:hover {
+    opacity: 1;
+    transform: scale(1.4);
+}
+
+.span {
+    width: 50px;
+    height: 6px;
+    background-image: linear-gradient(to left, #9f0049, #480076);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.modal {
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    top: -20px;
+    right: -120px;
+    border-radius: 30px;
+
+    font-family: Agency FB;
+    padding: 18px;
+    transform: translatex(600px);
+}
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 44px;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.float {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.mute,
+.vk,
+.github {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.mute:hover {
+    transform: scale(1.4);
+    background-color: #eb8787;
+}
+
+.vk:hover {
+    transform: scale(1.4);
+    background-color: skyblue;
+}
+
+.github:hover {
+    transform: scale(1.4);
+    background-color: #000000;
+}
+
+iframe {
+    position: absolute;
+    display: none;
+}
